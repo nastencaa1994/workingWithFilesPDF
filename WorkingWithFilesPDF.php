@@ -35,15 +35,15 @@ class WorkingWithFilesPDF {
 
     private function headersFile($title){
         $this->file->SetFont('DejaVu','',25);
-        $this->file->Cell(80);
-        $this->file->MultiCell(100,10,$title,0,0);
+        $this->file->Cell(20);
+        $this->file->MultiCell(180,10,$title,0,0);
         $this->file->Ln(20);
         $this->file->SetFont('DejaVu','',14);
     }
 
     public function saveFile($fileName){
-        //$this->file->Output();
-        $this->file->Output('F', $fileName);
+        $this->file->Output();
+        //$this->file->Output('F', $fileName);
         $link=$fileName;
         return $link;
     }
